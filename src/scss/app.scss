@@ -1,0 +1,12 @@
+@import "tools/variables";
+@import "tools/reset";
+@import "tools/functions";
+@import "tools/mixins";
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: $text-color;
+  word-break: break-word;
+  background-color: $background-color;
+}
