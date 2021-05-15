@@ -7,9 +7,10 @@
   "author": "labfordev <labfordev@gmail.com>",
   "license": "MIT",
   "private": false,
-  "engines": {
-    "node": "^10 || ^12 || >=14"
-  },
+  "browserslist": [
+    "last 2 versions",
+    "> 5%"
+  ],
   "devDependencies": {
     "@babel/core": "^7.14.2",
     "@babel/preset-env": "^7.14.2",
@@ -45,5 +46,19 @@
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
-  }
+  },
+  "engines": {
+    "node": "^10 || ^12 || >=14"
+  },
+  "scripts": {
+    "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
+    "watch": "webpack --config configuration/webpack.dev.config.js --mode=development --watch",
+    "bundle": "yarn install && yarn watch",
+    "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
+    "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
+    "lint:sass": "sass-lint -v -q",
+    "lint:js": "eslint --ext .js src/js/",
+    "stats": "webpack --config configuration/webpack.prod.config.js --mode=production --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
+  },
+  "target": "web"
 }
