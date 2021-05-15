@@ -1,0 +1,10 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate Webpack pour démarrer rapidement des projets frontend.",
+  "main": "index.js",
+  "repository": "https://github.com/labfordev/webpack-boilerplate.git",
+  "author": "labfordev <labfordev@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
